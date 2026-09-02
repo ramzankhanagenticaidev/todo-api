@@ -23,7 +23,7 @@ This API lets you create, read, update, and delete tasks. Data is stored in memo
    ```
    uvicorn main:app --reload --port 8000
    ```
-4. Visit `` to try it out in Swagger UI.
+4. Visit `http://localhost:8000/docs` to try it out in Swagger UI.
 
 ## Endpoints
 
@@ -58,9 +58,8 @@ content-type: application/json
 
 Screenshot of a successful request/response cycle in Swagger UI:
 
-![Swagger UI screenshot]![alt text](image-1.png)
+![Swagger UI screenshot](screenshot.png)
 
 ## Notes on in-memory storage
 
 Restarting the server resets all tasks back to the original 3 example tasks. Anything created, updated, or deleted during a session is lost, because the data only lives in a Python list in memory — there's no database saving it to disk yet.
-
